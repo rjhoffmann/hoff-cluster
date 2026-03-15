@@ -1,0 +1,67 @@
+clusterName: hoff
+endpoint: https://192.168.20.10:6443
+
+talosVersion: v1.12.3
+kubernetesVersion: v1.32.0
+
+cniConfig:
+  name: none
+
+additionalApiServerCertSans:
+  - 192.168.20.10
+
+nodes:
+  - hostname: sequoia
+    ipAddress: 192.168.20.3
+    installDisk: /dev/nvme0n1
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "*"
+        dhcp: false
+        addresses:
+          - 192.168.20.3/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.20.1
+        vip:
+          ip: 192.168.20.10
+
+  - hostname: cedar
+    ipAddress: 192.168.20.4
+    installDisk: /dev/nvme0n1
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "*"
+        dhcp: false
+        addresses:
+          - 192.168.20.4/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.20.1
+        vip:
+          ip: 192.168.20.10
+
+  - hostname: spruce
+    ipAddress: 192.168.20.5
+    installDisk: /dev/nvme0n1
+    controlPlane: true
+    networkInterfaces:
+      - deviceSelector:
+          hardwareAddr: "*"
+        dhcp: false
+        addresses:
+          - 192.168.20.5/24
+        routes:
+          - network: 0.0.0.0/0
+            gateway: 192.168.20.1
+        vip:
+          ip: 192.168.20.10
+
+controlPlane:
+  patches:
+    - "@./patches/controlplane.yaml"
+
+patches:
+  - "@./patches/global.yaml"
