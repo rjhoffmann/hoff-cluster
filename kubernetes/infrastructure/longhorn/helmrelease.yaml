@@ -18,7 +18,6 @@ spec:
     defaultSettings:
       defaultReplicaCount: 3
       storageMinimalAvailablePercentage: 10
-    csi:
       kubeletRootDir: /var/lib/kubelet
     longhornManager:
       tolerations:
