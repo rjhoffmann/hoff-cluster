@@ -5,6 +5,7 @@ metadata:
   namespace: longhorn-system
 spec:
   interval: 1h
+  timeout: 10m
   chart:
     spec:
       chart: longhorn
@@ -18,6 +19,16 @@ spec:
       defaultReplicaCount: 3
       storageMinimalAvailablePercentage: 10
     longhornManager:
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+    longhornDriver:
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+    longhornUI:
       tolerations:
         - key: node-role.kubernetes.io/control-plane
           operator: Exists
