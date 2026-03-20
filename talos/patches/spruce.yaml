@@ -1,4 +1,8 @@
 machine:
+  disks:
+    - device: /dev/sda
+      partitions:
+        - mountpoint: /var/mnt/storage
   kubelet:
     extraMounts:
       - destination: /var/mnt/storage
