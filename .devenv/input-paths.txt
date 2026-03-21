@@ -1,0 +1,6 @@
+/Users/ryan/Source/hoff-cluster/.devenv/bootstrap/bootstrapLib.nix
+/Users/ryan/Source/hoff-cluster/.devenv/bootstrap/default.nix
+/Users/ryan/Source/hoff-cluster/devenv.lock
+/Users/ryan/Source/hoff-cluster/devenv.nix
+/Users/ryan/Source/hoff-cluster/devenv.yaml
+/Users/ryan/Source/hoff-cluster/.env

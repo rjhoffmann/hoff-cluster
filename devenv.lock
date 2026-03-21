@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "devenv": {
+      "locked": {
+        "dir": "src/modules",
+        "lastModified": 1774052327,
+        "narHash": "sha256-gQhiHj8q5NAa8jGTmoaS8FRgo8bVoAL2difjmcLtdgo=",
+        "owner": "cachix",
+        "repo": "devenv",
+        "rev": "43c650cae3ca65b6095819e4613614c242588cd7",
+        "type": "github"
+      },
+      "original": {
+        "dir": "src/modules",
+        "owner": "cachix",
+        "repo": "devenv",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1773628058,
+        "narHash": "sha256-hpXH0z3K9xv0fHaje136KY872VT2T5uwxtezlAskQgY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f8573b9c935cfaa162dd62cc9e75ae2db86f85df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "devenv": "devenv",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
