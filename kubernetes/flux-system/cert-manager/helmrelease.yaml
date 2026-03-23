@@ -18,8 +18,6 @@ spec:
   upgrade:
     crds: CreateReplace
   timeout: 10m
-  test:
-    enabled: false
   values:
     crds:
       enabled: true

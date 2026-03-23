@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: YOUR_EMAIL@hoff.pub
+    email: ryan@hoff.pub
     privateKeySecretRef:
       name: letsencrypt-production-key
     solvers:
@@ -22,7 +22,7 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: YOUR_EMAIL@hoff.pub
+    email: ryan@hoff.pub
     privateKeySecretRef:
       name: letsencrypt-staging-key
     solvers:
