@@ -27,7 +27,7 @@ spec:
     name: flux-system
   dependsOn:
     - name: cert-manager
-  decryptionRef:
+  decryption:
     provider: sops
     secretRef:
       name: sops-age
